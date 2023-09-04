@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { MdSportsGymnastics } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 
 const Navlinks = [
   { name: "Home", link: "/" },
@@ -22,45 +23,65 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full top-0 left-0 bg-slate-400">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <span className="text-3xl text-indigo-600">
-            <MdSportsGymnastics />
-          </span>
-          <span className="font-bold md:text-2xl cursor-pointer font-sans">
-            Borhan&apos;s GYM
-          </span>
-        </div>
-        
-        <div className="relative mr-2 sm:mb-12">
-          <button onClick={toggleNav} className="sm:hidden block">
-            <FaBars />
-          </button>
-
-          {/* Navigation menu */}
-          <ul
-            className={`sm:flex sm:items-center ${
-              isNavOpen ? "block" : "hidden"
-            } absolute top-full right-0 bg-slate-400 p-2`}
-          >
-            {Navlinks.map((linkItem, index) => (
-              <li key={index} className="md:ml-3 text-xl mr-4 mt-6 sm:mt-0">
-                <Link
-                  to={linkItem.link}
-                  className={` text-teal-950 text-2xl hover:text-blue-800 duration-500 ${
+    <>
+      <div className="bg-[#93917C]">
+        <div className="flex justify-between p-2">
+          <div className="flex">
+            <span className="text-3xl text-indigo-600">
+              <MdSportsGymnastics />
+            </span>
+            <span className="font-bold md:text-2xl cursor-pointer font-sans">
+              Borhan's GYM
+            </span>
+          </div>
+          {/* Hide this on small screens */}
+          <div className="hidden md:block ">
+            <ul className="flex space-x-2 mr-4 text-2xl">
+              {Navlinks.map((linkItem, index) => (
+                <li
+                  key={index}
+                  className={`hover:text-zinc-950  text-[#333333] ${
                     location.pathname === linkItem.link
-                      ? " bg-gray-300 rounded" // Add your active link background color class here
-                      : ""
+                      ? " text-white rounded-md"
+                      : null
                   }`}
                 >
-                  {linkItem.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  <Link to={linkItem.link}>{linkItem.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Show this on small screens */}
+          <div className="md:hidden flex items-center">
+            <button onClick={toggleNav} className="">
+              {isNavOpen ? <ImCross /> : <FaBars />}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden fixed p-4 right-5 bg-[#25383C] ${
+          isNavOpen
+            ? "opacity-200 translate-x-0  transition-transform ease-in duration-300"
+            : "opacity-0 translate-x-[20px] transition-transform ease-out duration-900"
+        }`}
+      >
+        <ul>
+          {Navlinks.map((linkItem, index) => (
+            <li
+              key={index}
+              className={`hover:text-zinc-950 text-2xl hover: text-white p-2 ${
+                location.pathname === linkItem.link
+                  ? " text-red-400 rounded-md"
+                  : null
+              }`}
+            >
+              <Link to={linkItem.link}>{linkItem.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
