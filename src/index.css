@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    --dot-bg: #C3FDB8;
+    --dot-bg:#43302E;
     --dot-color: black;
     --dot-size: 1px;
     --dot-space: 22px;
@@ -11,3 +11,4 @@ body {
           linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-color);
   }
+
