@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {AiOutlineMail} from "react-icons/ai"
 function Footer() {
   return (
     <div className="  flex justify-between bg-slate-500 p-8 text-black text-xl">
@@ -17,13 +18,12 @@ function Footer() {
         <h1 className="text-3xl">Resources</h1>
         <Link to="/">FAQ & Help</Link>
         <br />
-        <Link to="/">FAQ & Help</Link>
-
-
-    
+        <Link to="/">Policy</Link>
       </div>
       <div>
         <h1 className="text-3xl"> SOCIAL MEDIA</h1>
+        <Link >  {<AiOutlineMail/>}</Link>
+     
       </div>
     </div>
   );

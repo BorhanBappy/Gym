@@ -16,77 +16,77 @@ function Gallery() {
       </div>
       <div className="grid grid-cols-3 gap-4">
         <img
-          src="../images/gallery1.jpg"
+          src="src/images/gallery1.png"
           alt="Gallery 1"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery2.jpg"
+          src="src/images/gallery2.jpg"
           alt="Gallery 2"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery3.jpg"
+          src="src/images/gallery3.jpg"
           alt="Gallery 3"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery4.jpg"
+          src="src/images/gallery4.jpg"
           alt="Gallery 4"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery5.jpg"
+          src="src/images/gallery5.jpg"
           alt="Gallery 5"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery6.jpg"
+          src="src/images/gallery6.jpg"
           alt="Gallery 6"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery7.jpg"
+          src="src/images/gallery7.jpg"
           alt="Gallery 7"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery8.jpg"
+          src="src/images/gallery8.jpg"
           alt="Gallery 8"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery9.jpg"
+          src="src/images/gallery9.jpg"
           alt="Gallery 9"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery10.jpg"
+          src="src/images/gallery10.jpg"
           alt="Gallery 10"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery11.jpg"
+          src="src/images/gallery11.jpg"
           alt="Gallery 11"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery12.jpg"
+          src="src/images/gallery12.jpg"
           alt="Gallery 12"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery13.jpg"
+          src="src/images/gallery13.jpg"
           alt="Gallery 13"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery14.jpg"
+          src="src/images/gallery14.jpg"
           alt="Gallery 14"
           className="max-w-full h-auto"
         />
         <img
-          src="../images/gallery15.jpg"
+          src="src/images/gallery15.jpg"
           alt="Gallery 14"
           className="max-w-full h-auto"
         />
