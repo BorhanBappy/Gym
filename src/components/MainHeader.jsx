@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "../images/main_header.png";
 function MainHeader() {
   return (
     <header className="md:h-screen grid place-items-center">
@@ -22,7 +21,7 @@ function MainHeader() {
           
          
           <div className="">
-          <img src={Image} alt="Main Header Image" />
+          <img src="/public/images/main_header.png" alt="Main Header Image" />
           </div>
         </div>
     </header>
