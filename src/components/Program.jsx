@@ -1,0 +1,34 @@
+// Program.js
+
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Programs } from "./Data";
+
+function Program() {
+  return (
+    <>
+      <div className="p-4  text-4xl text-center text-orange-400">Programs </div>
+      <div className="mb-8 mr-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        {Programs.map((program, index) => (
+          <div key={index} className="p-4 border rounded-lg text-center">
+            <h3 className="text-lg font-semibold">{program.title}</h3>
+            <img
+              src={program.icon}
+              alt={program.title}
+              className="mt-2 mx-auto w-32 h-32 mb-5"
+            />
+            {/* Use Link to navigate to program details */}
+            <Link
+              to={`/program-details/${program.ID}`} // Include the program's ID in the URL
+              className="mt-20 bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 "
+            >
+              Go to Program details
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default Program;

@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    --dot-bg:#43302E;
-    --dot-color: black;
+    --dot-bg:#25383C;
+    --dot-color: rgb(179, 155, 155);
     --dot-size: 1px;
     --dot-space: 22px;
       background:
           linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-color);
+          position: relative;
   }
 
+  html {
+    @apply text-white
+  }
