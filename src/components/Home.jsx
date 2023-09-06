@@ -8,8 +8,6 @@ function Home() {
         <MainHeader />
         <Program />
       </div>
-      <div className=" m-16 flex justify-between">
-      </div>
     </>
   );
 }

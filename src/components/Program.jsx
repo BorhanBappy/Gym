@@ -7,7 +7,7 @@ import { Programs } from "./Data";
 function Program() {
   return (
     <>
-      <div className="p-4  text-4xl text-center text-orange-400">Programs </div>
+      <div className="text-4xl text-center text-orange-400 mb-4">Programs </div>
       <div className="mb-8 mr-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
         {Programs.map((program, index) => (
           <div key={index} className="p-4 border rounded-lg text-center">
@@ -15,7 +15,7 @@ function Program() {
             <img
               src={program.icon}
               alt={program.title}
-              className="mt-2 mx-auto w-32 h-32 mb-5"
+              className="mt-2 mx-auto w-32 h-32 p-4"
             />
             {/* Use Link to navigate to program details */}
             <Link
