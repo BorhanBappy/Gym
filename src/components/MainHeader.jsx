@@ -21,7 +21,7 @@ function MainHeader() {
           
          
           <div className="">
-          <img src="/public/images/main_header.png" alt="Main Header Image" />
+          <img src="/images/main_header.png" alt="Main Header Image" />
           </div>
         </div>
     </header>
