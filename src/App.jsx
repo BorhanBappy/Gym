@@ -11,28 +11,28 @@ import Notfound from "./components/Notfound";
 import Navbar from "./components/Navbar";
 import ProgramDetails from "./components/ProgramDetails";
 import Footer from "./components/Footer";
+
 export default function App() {
   return (
     <div>
-      <BrowserRouter>
-        {<Navbar />}
+        <BrowserRouter>
+          {<Navbar />}
 
-        <div className="pt-16"></div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contract" element={<Contract />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/plans" element={<Plans />} />
-          <Route path="/trainers/:name" element={<Trainers />} />
-          <Route path="/program-details/:id" element={<ProgramDetails />} />
+          <div className="pt-16"></div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contract" element={<Contract />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/plans" element={<Plans />} />
+            <Route path="/trainers/:name" element={<Trainers />} />
+            <Route path="/program-details/:id" element={<ProgramDetails />} />
 
-          <Route path="*" element={<Notfound />} />
-          {/* Add a 404 route if needed */}
-        </Routes>
-        {<Footer />}
-
-      </BrowserRouter>
+            <Route path="*" element={<Notfound />} />
+            {/* Add a 404 route if needed */}
+          </Routes>
+          {<Footer />}
+        </BrowserRouter>
     </div>
   );
 }

@@ -60,10 +60,10 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden fixed p-4 top-18 right-4 bg-[#25383C] ${
+          className={`md:hidden fixed p-4 top-18 right-0 bg-[#25383C] ${
             isNavOpen
               ? "opacity-200 translate-x-0 transition-transform ease-in duration-300"
-              : "opacity-0 translate-x-[20px] transition-transform ease-out duration-900"
+              : "opacity-0 translate-x-[130px] transition-transform ease-out duration-900"
           }`}
         >
           <ul className="">
