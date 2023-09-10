@@ -4,7 +4,7 @@ function Plan() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
-  const commonStyle = "p-8 bg-yellow-100 rounded-lg";
+  const commonStyle = "p-8 bg-yellow-100 ";
   const commonTextStyle = "text-yellow-700 text-2xl font-bold";
   const commonListStyle = "p-3 space-y-2 list-decimal text-left text-gray-950";
   const handleShow1Click = () => {
@@ -18,21 +18,26 @@ function Plan() {
     setShow1(false); // Reset the other buttons' state
     setShow3(false);
   };
-
+  //   console.log(show2);
+  //   console.log(!show2);
+  // console.log(" ")
   const handleShow3Click = () => {
     setShow3(!show3);
     setShow1(false); // Reset the other buttons' state
     setShow2(false);
   };
+  // console.log(show1);
+  // console.log(show2);
+  // console.log(show3);
 
   return (
-    <div className={`mb-56 ${show1 || show2 || show3 ? "mb-0" : ""}`}>
+    <div className={`${show1 || show2 || show3 ? "mb-1" : " mb-60"}`}>
       <h1 className="text-4xl py-4 relative text-center">
         <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text">
           Plan&apos;S
         </span>
       </h1>
-      <div className="flex justify-between mx-24">
+      <div className="flex justify-between mx-24 mb-0">
         {/* Center the buttons */}
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -57,7 +62,7 @@ function Plan() {
         </button>
       </div>
 
-      <div className="text-center ">
+      <div className="text-center">
         {show1 && (
           <div className={commonStyle}>
             <h2 className={commonTextStyle}>
