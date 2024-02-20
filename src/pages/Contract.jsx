@@ -2,7 +2,7 @@ import React from "react";
 
 function Contract() {
   return (
-    <div className="contract-page bg-dot-bg text-white p-6">
+    <div className="contract-page bg-dot-bg text-white p-6 pt-16">
       <h2 className="text-3xl font-semibold mb-4 text-center">
         Borhan&apos;s Gym Membership Contract
       </h2>

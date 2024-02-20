@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 function MainHeader() {
   return (
     <header className="md:h-screen grid place-items-center">
-      <div className="md:h-full grid grid-cols-2 md:gap-24 items-center justify-between">
+      <div className="md:h-full grid grid-cols-2 md:gap-24 items-center justify-between text-[#F0F0F0]">
           <div className="">
-            <h4 className="text-2xl font-bold md:mb-4">#100DaysofWorkout</h4>
+            <h4 className="text-2xl font-bold sm:mb-4 ">#100DaysofWorkout</h4>
             <h1 className=" md:text-5xl font-bold">
               Join The Legends Of the Fitness World
             </h1>

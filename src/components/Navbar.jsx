@@ -57,23 +57,23 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-
         {/* Mobile menu */}
         <div
-          className={`md:hidden fixed p-4 top-18 right-0 bg-[#25383C] ${
+          className={`md:hidden fixed p-4 top-18 right-0 bg-[#25383C] z-50 ${
             isNavOpen
               ? "opacity-200 translate-x-0 transition-transform ease-in duration-300"
               : "opacity-0 translate-x-[130px] transition-transform ease-out duration-900"
           }`}
+          
         >
           <ul className="">
             {Navlinks.map((linkItem, index) => (
               <li
                 key={index}
-                className={`hover:text-zinc-950 text-2xl p-2 ${
+                className={`text-2xl p-2 ${
                   location.pathname === linkItem.link
                     ? "text-red-500 rounded-md"
-                    : null
+                    : "text-white"
                 }`}
               >
                 <Link to={linkItem.link}>{linkItem.name}</Link>
@@ -82,7 +82,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      
     </>
   );
 }

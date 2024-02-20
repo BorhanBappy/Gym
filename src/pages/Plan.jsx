@@ -31,9 +31,9 @@ function Plan() {
   // console.log(show3);
 
   return (
-    <div className={`${show1 || show2 || show3 ? "mb-1" : " mb-60"}`}>
+    <div className={`${show1 || show2 || show3 ? "mb-1" : " mb-60"} pt-10`}>
       <h1 className="text-4xl py-4 relative text-center">
-        <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text ">
           Plan&apos;S
         </span>
       </h1>

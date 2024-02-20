@@ -1,38 +1,35 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contract from "./components/Contract";
-import Gallery from "./components/Gallery";
-import Plans from "./components/Plan";
-import Trainers from "./components/Trainers";
-import Notfound from "./components/Notfound";
-
-import Navbar from "./components/Navbar";
-import ProgramDetails from "./components/ProgramDetails";
-import Footer from "./components/Footer";
+import { Outlet } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import React, { useState, useEffect } from 'react';
 
 export default function App() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(
+        (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+      );
+      setPrevScrollPos(currentScrollPos);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos, visible]);
+
   return (
     <div>
-        <BrowserRouter>
-          {<Navbar />}
-
-          <div className="pt-16"></div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contract" element={<Contract />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/plans" element={<Plans />} />
-            <Route path="/trainers/:name" element={<Trainers />} />
-            <Route path="/program-details/:id" element={<ProgramDetails />} />
-
-            <Route path="*" element={<Notfound />} />
-            {/* Add a 404 route if needed */}
-          </Routes>
-          {<Footer />}
-        </BrowserRouter>
+      <Navbar isVisible={visible}/>
+      <Outlet/>
+      <Footer/>
     </div>
   );
 }

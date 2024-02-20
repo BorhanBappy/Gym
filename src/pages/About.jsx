@@ -4,14 +4,14 @@ function About() {
   return (
     <>
       <div>
-        <div className=" text-center p -4 m-4 ">
+        <div className=" text-center p-4 pt-10 ">
           <h1 className="text-4xl py-4 relative">
             <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text">
               About Us
             </span>
           </h1>
-          <h4 className=" text-2xl py-4">Welcome to Borhan&apos;s GYM !</h4>
-          <p>
+          <h4 className=" text-2xl py-4 text-white">Welcome to Borhan&apos;s GYM !</h4>
+          <p className=" text-[#14DCEB] text-lg">
             At Borhan&apos;s, we&apos;re more than just a place to work out;
             we&apos;re a community of fitness enthusiasts, dedicated to helping
             you achieve your health and wellness goals. Our gym is not just a

@@ -1,6 +1,6 @@
 import React from "react";
-import MainHeader from "./MainHeader";
-import Program from "./Program";
+import MainHeader from "../components/MainHeader";
+import Program from "../components/Program";
 function Home() {
   return (
     <>
