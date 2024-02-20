@@ -8,13 +8,13 @@ export const Programs = [
   {
     ID: 2,
     icon: "/images/2.png",
-    title: "Intermediate Strength Training",
+    title: "Intermediate ",
     path: "/workouts/intermediate",
   },
   {
     ID: 3,
     icon: "/images/3.png",
-    title: "Advanced Cardio Routine",
+    title: "Advanced",
     path: "/workouts/advanced",
   },
 ];

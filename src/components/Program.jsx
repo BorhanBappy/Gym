@@ -11,7 +11,7 @@ function Program() {
       <div className="mb-8 mr-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
         {Programs.map((program, index) => (
           <div key={index} className="p-4 border rounded-lg text-center">
-            <h3 className="font-semibold text-[#EBC8F9] text-sm lg:text-2xl">
+            <h3 className="font-semibold text-[#EBC8F9] text-sm lg:text-lg">
               {program.title}
             </h3>
             <img
