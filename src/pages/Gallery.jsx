@@ -5,7 +5,7 @@ function Gallery() {
     <>
       <div>
         <div className="pt-10">
-          <h1 className="text-4xl py-4 relative text-center">
+          <h1 className="text-4xl py-4  text-center">
             <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text">
               Welcome to Our Gym Gallery
             </span>

@@ -5,7 +5,7 @@ function About() {
     <>
       <div>
         <div className=" text-center p-4 pt-10 ">
-          <h1 className="text-4xl py-4 relative">
+          <h1 className="text-4xl py-4 ">
             <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text">
               About Us
             </span>

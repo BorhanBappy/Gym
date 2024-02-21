@@ -2,15 +2,18 @@ import React from "react";
 
 function Contract() {
   return (
-    <div className="contract-page bg-dot-bg text-white p-6 pt-16">
-      <h2 className="text-3xl font-semibold mb-4 text-center">
-        Borhan&apos;s Gym Membership Contract
-      </h2>
+    <div className="pt-10 text-[#14DCEB]">
+      <h1 className="text-4xl py-4  text-center">
+        <span className="text-transparent bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text ">
+          Borhan&apos;s Gym Membership Contract
+        </span>
+      </h1>
+
       <p className="text-lg mb-4 text-center">
         Thank you for choosing Borhan&apos;s Gym! Please review the terms and
         conditions of your membership below:
       </p>
-      <div className="flex justify-center space-x-40 m-16">
+      <div className="flex justify-between gap-2 m-16">
         <div className="contract-details mb-6">
           <h3 className="text-xl font-semibold mb-2">Contact Information:</h3>
           <p>

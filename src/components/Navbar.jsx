@@ -24,7 +24,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-[#93917C] fixed w-full">
+      {/* Here Delete fixed navbar not show after scroll down */}
+
+      <div className="bg-[#93917C] fixed h-[46px] w-full">
         <div className="flex justify-between p-2">
           <div className="flex">
             <span className="text-3xl text-indigo-600">
@@ -59,12 +61,11 @@ export default function Navbar() {
         </div>
         {/* Mobile menu */}
         <div
-          className={`md:hidden fixed p-4 top-18 right-0 bg-[#25383C] z-50 ${
+          className={`md:hidden fixed p-4  right-0 bg-[#25383C] z-50 ${
             isNavOpen
               ? "opacity-200 translate-x-0 transition-transform ease-in duration-300"
               : "opacity-0 translate-x-[130px] transition-transform ease-out duration-900"
           }`}
-          
         >
           <ul className="">
             {Navlinks.map((linkItem, index) => (
@@ -76,6 +77,9 @@ export default function Navbar() {
                     : "text-white"
                 }`}
               >
+                {/* This want to used if want after click menu hide automatically */}
+                {/* <Link to={linkItem.link} onClick={() => setIsNavOpen(false)}>{linkItem.name}</Link> */}
+
                 <Link to={linkItem.link}>{linkItem.name}</Link>
               </li>
             ))}
